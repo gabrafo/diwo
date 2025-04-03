@@ -1,98 +1,128 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+# Diwo Backend Challenge - Lugares para Conhecer 🌍
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+[![NestJS](https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=nestjs&logoColor=white)](https://nestjs.com/)
+[![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+API REST para gerenciamento de locais que deseja conhecer ao redor do mundo, desenvolvida como solução para o desafio técnico da Diwo.
 
-## Description
+## Tecnologias Utilizadas 🖥️
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+- **NestJS** - Framework backend
+- **TypeScript** - Linguagem principal
+- **PostgreSQL** - Banco de dados relacional
+- **TypeORM** - ORM para acesso ao banco
+- **Docker** - Containerização da aplicação
+- **Jest** - Testes automatizados
+- **Swagger** - Documentação de API
 
-## Project setup
+## Requisitos Implementados ✅
 
+### Obrigatórios 📝
+- CRUD completo de locais
+- Validação de unicidade (país + local)
+- Ordenação crescente por meta
+- Banco de dados PostgreSQL
+- Dockerização completa
+- Documentação de execução
+
+### Bônus ⭐
+- Implementação com NestJS
+- Uso de TypeScript
+- Integração com TypeORM
+- Container Docker otimizado
+- Suíte de testes automatizados
+- Documentação Swagger
+
+## Como Executar 🛠️
+
+### Pré-requisitos
+- Docker e Docker Compose instalados
+- Node.js 20.x (opcional para execução local)
+
+### Com Docker (Recomendado)
 ```bash
-$ npm install
+# 1. Clone o repositório
+git clone https://github.com/seu-usuario/diwo-challenge.git
+
+# 2. Acesse o diretório
+cd diwo-challenge
+
+# 3. Inicie os containers
+docker-compose up --build
+
+# A API estará disponível em: http://localhost:3000
 ```
 
-## Compile and run the project
-
+### Localmente 💻
 ```bash
-# development
-$ npm run start
+Copy
+# 1. Instale as dependências
+npm install
 
-# watch mode
-$ npm run start:dev
+# 2. Configure o .env (copie .env.example)
+cp .env.example .env
 
-# production mode
-$ npm run start:prod
+# 3. Inicie o servidor
+npm run start:dev
 ```
 
-## Run tests
-
+### Testando a Aplicação 🔍
 ```bash
-# unit tests
-$ npm run test
+# Executar todos os testes
+npm test
 
-# e2e tests
-$ npm run test:e2e
+# Executar testes com cobertura
+npm run test:cov
 
-# test coverage
-$ npm run test:cov
+# Executar testes em modo watch
+npm run test:watch
 ```
 
-## Deployment
+## Documentação da API 📚
 
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
-
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
-
+- Acesse a documentação interativa via Swagger:
 ```bash
-$ npm install -g mau
-$ mau deploy
+http://localhost:3000/api/docs
 ```
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+## ⚙️ Variáveis de Ambiente
 
-## Resources
+| Variável          | Descrição               | Valor Padrão    |
+|:------------------|:-----------------------:|----------------:|
+| DATABASE_HOST     | Host do banco de dados  | localhost       |
+| DATABASE_PORT     | Porta do banco          | 5432            |
+| DATABASE_USER     | Usuário do banco        | diwo            |
+| DATABASE_PASSWORD | Senha do banco          | diwo123         |
+| DATABASE_NAME     | Nome do banco           | diwo_challenge  |
+| PORT              | Porta da aplicação      | 3000            |
 
-Check out a few resources that may come in handy when working with NestJS:
+## Modelo de Dados 🎲
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+```typescript
+class Place {
+  id: number;
+  country: string;        // País do local
+  location: string;       // Nome do local
+  goal: Date;             // Meta de visita (YYYY-MM)
+  flagUrl: string;        // URL da bandeira
+  createdAt: Date;        // Data de criação
+  updatedAt: Date;        // Data de atualização
+}
+```
 
-## Support
+## Estrutura Docker 🐳
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+- Serviços:
+1. app: Aplicação NestJS (Porta 3000)
+2. postgres: Banco de dados PostgreSQL (Porta 5432)
 
-## Stay in touch
+- Volumes:
+1. postgres_data: Armazenamento persistente do banco
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+## Licença 🗒️
 
-## License
+Este projeto foi desenvolvido como parte do processo seletivo da Diwo e não possui licença aberta.
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+- Desenvolvido com ❤️ por **Gabrafo**
+Candidato à vaga de Desenvolvedor Backend na Diwo.
