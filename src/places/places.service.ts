@@ -57,6 +57,10 @@ export class PlacesService {
             throw new BadRequestException('Nenhum campo válido para atualização foi fornecido');
         }
 
+        if (!moment(updatePlaceDto.goal, 'YYYY-MM', true).isValid()) {
+            throw new BadRequestException('O campo goal deve estar no formato YYYY-MM');
+        }
+
         const formattedGoal = new Date(`${updatePlaceDto.goal}-01T00:00:00Z`);
 
         const place = await this.findOne(id);
