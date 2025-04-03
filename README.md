@@ -56,7 +56,6 @@ docker-compose up --build
 
 ### Localmente 💻
 ```bash
-Copy
 # 1. Instale as dependências
 npm install
 
