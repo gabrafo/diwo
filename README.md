@@ -114,15 +114,14 @@ class Place {
 ## Estrutura Docker 🐳
 
 - Serviços:
-1. app: Aplicação NestJS (Porta 3000)
-2. postgres: Banco de dados PostgreSQL (Porta 5432)
+`app`: Aplicação NestJS (Porta 3000)
+`postgres`: Banco de dados PostgreSQL (Porta 5432)
 
 - Volumes:
-1. postgres_data: Armazenamento persistente do banco
+`postgres_data`: Armazenamento persistente do banco
 
 ## Licença 🗒️
 
 Este projeto foi desenvolvido como parte do processo seletivo da Diwo e não possui licença aberta.
 
-- Desenvolvido com ❤️ por **Gabrafo**
-Candidato à vaga de Desenvolvedor Backend na Diwo.
+- Desenvolvido com ❤️ por **Gabrafo** (candidato à vaga de Desenvolvedor Backend na Diwo).
