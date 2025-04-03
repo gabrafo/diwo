@@ -1,14 +1,15 @@
-import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn, Unique } from 'typeorm';
 
 @Entity()
+@Unique(['country', 'location']) // Restrição composta
 export class Place {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({ unique: true })
+  @Column()
   country: string;
 
-  @Column({ unique: true })
+  @Column()
   location: string;
 
   @Column({ type: 'date' })
