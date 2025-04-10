@@ -89,11 +89,10 @@ http://localhost:3000/api/docs
 
 | Variável          | Descrição               | Valor Padrão    |
 |:------------------|:-----------------------:|----------------:|
-| DATABASE_HOST     | Host do banco de dados  | localhost       |
 | DATABASE_PORT     | Porta do banco          | 5432            |
 | DATABASE_USER     | Usuário do banco        | diwo            |
-| DATABASE_PASSWORD | Senha do banco          | diwo123         |
-| DATABASE_NAME     | Nome do banco           | diwo_challenge  |
+| DATABASE_PASSWORD | Senha do banco          | secret          |
+| DATABASE_NAME     | Nome do banco           | places          |
 | PORT              | Porta da aplicação      | 3000            |
 
 ## Modelo de Dados 🎲
