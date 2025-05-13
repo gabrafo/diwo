@@ -43,10 +43,10 @@ API REST para gerenciamento de locais que deseja conhecer ao redor do mundo, des
 ### Com Docker (Recomendado)
 ```bash
 # 1. Clone o repositório
-git clone https://github.com/seu-usuario/diwo-challenge.git
+git clone https://github.com/gabrafo/diwo.git
 
 # 2. Acesse o diretório
-cd diwo-challenge
+cd diwo
 
 # 3. Inicie os containers
 docker-compose up --build
